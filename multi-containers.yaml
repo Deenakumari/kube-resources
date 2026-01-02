@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: multicontainer
   labels:
-    purpose: multi-container demo
+    purpose: multi-container-demo
     project: roboshop
 spec:
    containers:
