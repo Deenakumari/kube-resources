@@ -9,9 +9,10 @@ metadata:
 spec:
   replicas: 3
   selector:
-     purpose: replicaset-demo
-     env: dev
-     tier: frontend
+    matchLabels:
+      purpose: replicaset-demo
+      env: dev
+      tier: frontend
   template:
     metadata:
       labels:
