@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+   name: replica-demo
+   labels:
+     purpose: replicaset-demo
+     env: dev
+     tier: frontend
+spec:
+  replicas: 3
+  selector:
+     purpose: replicaset-demo
+     env: dev
+     tier: frontend
+  template:
+    metadata:
+      labels:
+        purpose: replicaset-demo
+     
+    spec:
+      containers:
+        - name: nginx
+          image: nginx    
+         
