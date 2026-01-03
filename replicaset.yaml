@@ -16,6 +16,8 @@ spec:
     metadata:
       labels:
         purpose: replicaset-demo
+        env: dev
+        tier: frontend
      
     spec:
       containers:
