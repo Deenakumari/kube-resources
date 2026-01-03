@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+   name: deployment-demo
+   labels:
+     purpose: deployment-demo
+     env: dev
+     tier: frontend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      purpose: deployment-demo
+      env: dev
+      tier: frontend
+  template:
+    metadata:
+      labels:
+        purpose: deployment-demo
+        env: dev
+        tier: frontend
+     
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:stable-perl   
